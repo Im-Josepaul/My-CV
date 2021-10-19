@@ -1,0 +1,124 @@
+
+/* Bar Graph Style */
+
+/* Mixings &  Variables */
+.clearfix,
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+  transform: scale(1);
+}
+
+/* Resets */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 1200px;
+}
+
+/* Bar Graph Class */
+.barGraph {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.graph {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(100% - 0%);
+  left: 4%;
+}
+
+.graph-barBack {
+  border-radius: 2px;
+  background: #DAE4EB;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.graph-bar {
+  background-color: #59BAC0;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 9999;
+  display: block;
+  height: 25px;
+  width: 0%;
+}
+
+.graph-bar:hover {
+  -webkit-transition: all 5s ease;
+  -moz-transition: all 5s ease;
+  -o-transition: all 5s ease;
+  transition: all 5s ease;
+  background: #428D92;
+}
+
+.graph-bar:last-child {
+  margin-bottom: 0;
+}
+
+.graph-bar:after {
+  position: absolute;
+  content: attr(data-value);
+  display: none;
+  font-size: 12px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 20px;
+  height: 20px;
+  padding: 0 10px;
+  margin-left: 5px;
+  left: 100%;
+  top: 0;
+}
+
+.graph-bar:hover:after {
+  display: block;
+}
+
+.graph-legend {
+  position: absolute;
+  margin-right: 5px;
+  left: -70px;
+  bottom: -5px;
+  z-index: 9999;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.graph-icon {
+  color: white;
+  position: absolute;
+  margin-right: 5px;
+  left: 1130px;
+  bottom: -12px;
+  z-index: 9999;
+}
+/* My Editas */
+@media screen and (max-width: 1280px) {
+  .graph-icon {
+    bottom: -10px;
+    left: 840px;
+  }
+}
+
